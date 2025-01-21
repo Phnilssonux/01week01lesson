@@ -1,30 +1,25 @@
 // Initial count value
-let count = 0;
-
+var count = 0;
 // Update the count display
-const updateCountDisplay = () => {
-    const countElement = document.getElementById('count');
+var updateCountDisplay = function () {
+    var countElement = document.getElementById('count');
     countElement.textContent = count;
 };
-
 // Increment the count
-const increment = () => {
+var increment = function () {
     count += 1;
     updateCountDisplay();
 };
-
 // Decrement the count
-const decrement = () => {
+var decrement = function () {
     count -= 1;
     updateCountDisplay();
 };
-
 // Reset the count
-const reset = () => {
+var reset = function () {
     count = 0;
     updateCountDisplay();
 };
-
 // Attach event listeners to buttons
 document.getElementById('increment-button').onclick = increment;
 document.getElementById('decrement-button').onclick = decrement;
